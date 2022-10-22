@@ -1,14 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script >
-   let vara= 4;
-    let varb= 6;
-     let sum=vara+varb;
-    document.write("sum:"+sum);
-    
-    
-</script>
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 450px;
+            background-color: #f1f1f1;
+            box-shadow: 3px 3px 2px #76a0cf;
+            border-radius: 15px;
+            border: 1px solid black;
+            position: relative;
+            left: 120px;
+            top: 120px;
+            align-items: center;
+            
+        }
+        .card_img{
+            height: 120px;
+            
+            margin: auto;
+            box-shadow:4px 4px 3px goldenrod ;
+            align-items: center;
+            border-radius:20px ;
 
-</html>
+        } 
+        .card_img-container{
+            background-color: rgb(247, 244, 241);
+            width: 120px;
+            height: 120px;
+             margin: auto;
+             padding: -3px;
+             box-shadow: 0px 0px 2px #76a0cf;
+             border-radius: 15px;
+             text-align: center;
+        }
+
+       
+             
+       
+        .card_title{
+            text-align: center;
+            font-size: 22px;
+            color: orange;
+
+        }
+        .para{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+    
+        }
+      .price{
+        background-color:goldenrod;
+        display: block;
+        padding: 2px;
+        text-align: center;
+        width: 120px;
+        font-size: 15px;
+        border-radius: 40%;
+        border: 1px dashed gray;
+        position: relative;
+        right:20px;
+        left: 15px;
+      
+      }
+      .price:hover{
+        background-color: skyblue;
+      }
+      .btn{
+        position: relative;
+        text-align: center;
+    
+        
+
+      }
+      .inc{
+        background-color:green;
+        border: 1px solid white;
+        border-radius: 20px;
+        font-size: 15px;
+        color: white;
+        padding: 5px;
+        width: 50px;
+      }
+      .inc:hover{
+        background-color:#76a0cf ;
+      }
+      .dec{
+        background-color:red;
+        border: 1px solid white;
+        border-radius: 20px;
+        font-size: 15px;
+        color:white;
+        padding: 5px;
+        width: 50px;
+      }
+      .dec:hover{
+        background-color: #76a0cf;
+      }
+       .reset{
+        background-color:gray;
+        border: 1px solid white;
+        border-radius: 25px;
+        font-size:10px;
+        color: azure;
+        padding: 5px;
+        width: 60px;
+       }
+       .reset:hover{
+        background-color:wheat;
+       }
+
+    </style>
+    <script>
+        let count=0;
+        function inc()
+        {
+            count++;
+            document.getElementById('counter').innerHTML=count;
+        }
+        function reset()
+        {
+            count=0;
+            document.getElementById('counter').innerHTML=count;
+
+        }
+        function dec()
+        {
+            count--;
+            document.getElementById('counter').innerHTML=count;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        
+            <div class="card_img-container">
+        <img src="rott.png" class="card_img" />
+        </div>
+        <h1 class="card_title">Rottweiler</h2>
+        <p class="para"> the Rottweiler<br> A Dog<br> strong enough to pull a card<br> gentle enough o love a child<br>smart enough to protect his master<br>and passionate enough to love</p>
+
+        
+        <span class="price" fas>only at RS.25000</span>
+        <div class="btn">
+        <h1 id="counter">0</h1>
+            <button class="inc" onclick="inc()">+</button>
+            <i class="fa-solid fa-rotate-right"></i>
+
+            <button  class="reset"  onclick="reset()">reset to zero</button>
+            <button class="dec" onclick="dec()">-</button>
+            </div>
+            
+        </div>
+    </div>
+    
